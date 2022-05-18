@@ -47,7 +47,7 @@ const customAxios = async (url, method, body) => {
 
 btn.addEventListener("click", () => {
   let message = input.value;
-  const BASE_URL = "http://localhost:8080/api/url/shorten";
+  const BASE_URL = "https://url-hash-app.herokuapp.com/api/url/shorten";
   //call function on button click
   customAxios(BASE_URL, "POST", {
     longUrl: message,
