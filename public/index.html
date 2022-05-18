@@ -1,0 +1,148 @@
+<body>
+<div id="main">
+  <div id="subscription">
+    <div id="sub__promo">
+      <h3 id="title">ENTER URL AND PRESS ENTER</h3>
+      <form id="sub__form">
+        <label for="email">URL</label>
+        <input type="text" id="email" />
+        <button type="button" value={{baseUrl}} id="sub__btn" aria-label="Subscribe">
+          <span class="sr-reader">Generate</span>
+        </button>
+      </form>
+    </div>
+    <p class="title" id="footerTitle" href=""></p>
+    <a class="sub__foot" id="foot" href="" target="_blank"></a>
+  </div>
+</div>
+<script src="scripts/jquery/dist/jquery.min.js"></script>
+  <script src="scripts/semantic-ui-css/semantic.min.js"></script>
+  <script src="scripts/axios/dist/axios.min.js"></script>
+  <script src="scripts/handlebars/dist/handlebars.min.js"></script>
+  <script src="scripts/vanilla-router/dist/vanilla-router.min.js"></script>
+  <script src="js/index.js"></script>
+  <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
+</body>
+
+<style>
+  @import url(`https://fonts.googleapis.com/css2?family=Josefin+Sans&family=MuseoModerno:wght@100;400&display=swap`);
+
+  * {
+    box-sizing: border-box;
+  }
+
+  #main {
+    min-height: 100vh;
+  }
+
+  #subscription {
+    width: 400px;
+    margin: 0 auto;
+    position: relative;
+    top: 80px;
+    font-family: "MuseoModerno", sans-serif;
+  }
+
+  #pre-header {
+    font-size: 0.8125rem;
+    font-weight: 800;
+  }
+
+  #title {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.3125rem;
+  }
+
+  label,
+  .sub__foot {
+    color: #757575;
+  }
+
+  label {
+    font-weight: 100;
+    position: relative;
+    top: 25px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .sub__foot {
+    font-size: 18px;
+    line-height: 16px;
+    font-weight: 400 !important;
+    padding-right: 50px;
+    margin-top: 20px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .sub__foot a {
+    color: #ff01f5;
+    text-decoration: none;
+  }
+
+  input {
+    width: 100%;
+    height: 40px;
+    outline: none;
+    font-size: 16px;
+    padding: 10px 40px 10px 0;
+  }
+
+  #sub__btn {
+    position: absolute;
+    right: 0;
+    border: none;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: inherit;
+  }
+
+  input {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #aaaaaa;
+  }
+
+  .sr-reader {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    top: auto;
+    overflow: hidden;
+  }
+
+  #sub__btn:after {
+    content: ">";
+    position: relative;
+    right: -10px;
+    top: -10px;
+    font-family: "MuseoModerno", sans-serif;
+    font-size: 150%;
+    font-weight: 100;
+    color: #8c8c8c;
+  }
+
+  #sub__btn:hover {
+    cursor: pointer;
+  }
+
+  input:active,
+  input:focus {
+    border-bottom: 5px solid #aaaaaa;
+  }
+
+  .isActive {
+    font-size: 70%;
+    top: 5px;
+  }
+
+  .invalid-border {
+    border-bottom: 5px solid red;
+  }
+
+  .success {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.3125rem;
+  }
+</style>
