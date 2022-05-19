@@ -2,10 +2,11 @@
 <div id="main">
   <div id="subscription">
     <div id="sub__promo">
+      <h2 id="mainTitle">URL HASHER</h3><br><br>
       <h3 id="title">ENTER URL AND PRESS ENTER</h3>
       <form id="sub__form">
-        <label for="email">URL</label>
-        <input type="text" id="email" />
+        <label for="url">URL</label>
+        <input type="text" id="url" />
         <button type="button" value={{baseUrl}} id="sub__btn" aria-label="Subscribe">
           <span class="sr-reader">Generate</span>
         </button>
@@ -33,6 +34,7 @@
 
   #main {
     min-height: 100vh;
+    background-color: aqua;
   }
 
   #subscription {
@@ -51,6 +53,13 @@
   #title {
     font-family: "Josefin Sans", sans-serif;
     font-size: 1.3125rem;
+    text-align: center;
+  }
+
+  #mainTitle {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.32rem;
+    text-align: center;
   }
 
   label,
@@ -82,7 +91,7 @@
   input {
     width: 100%;
     height: 40px;
-    outline: none;
+    border-width: 10%;
     font-size: 16px;
     padding: 10px 40px 10px 0;
   }

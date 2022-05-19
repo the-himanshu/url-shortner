@@ -1,5 +1,5 @@
 const label = document.querySelector("label");
-const input = document.querySelector("#email");
+const input = document.querySelector("#url");
 const main = document.querySelector("#main");
 const btn = document.querySelector("#sub__btn");
 const foot = document.querySelectorAll(".sub__foot");
@@ -35,7 +35,7 @@ const customAxios = async (url, method, body) => {
     //change html
     document.getElementById(
       "footerTitle"
-    ).innerHTML = `Your original URL '${finalData.longUrl}' has been coverted into a corresponding short URL. Click on link to go the original address`;
+    ).innerHTML = `Your original URL '${finalData.longUrl}' has been coverted into a corresponding short URL. Click on link to go the original address <br><br> Please Save The Link For Further Reference`;
     document.getElementById("foot").href = finalData.shortUrl;
     document.getElementById("foot").innerHTML = finalData.shortUrl;
     return finalData;
