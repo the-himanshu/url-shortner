@@ -1,5 +1,6 @@
 //main import
 const express = require("express");
+var cors = require('cors');
 const app = express();
 require('dotenv').config();
 
@@ -10,6 +11,9 @@ connection.on("error", () => console.log("Error"));
 
 // Routes Config
 app.use(express.json({ extended: false }));
+
+// CORS config
+app.use(cors());
 
 //parse incoming request body in JSON format.
 app.use("/", require("./routes/redirect"));
