@@ -18,6 +18,8 @@ app.use(cors());
 //parse incoming request body in JSON format.
 app.use("/", require("./routes/redirect"));
 app.use("/api/url", require("./routes/url"));
+app.use("/api/v1/users", require("./routes/users"));
+app.use("/api/v1/expenses", require("./routes/expenses"));
 
 //Listen for incoming requests
 const PORT = process.env.PORT || 8080;
