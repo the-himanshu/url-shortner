@@ -29,14 +29,14 @@ router.post("/login", async (req, res) => {
     username: req.body.username,
   });
   
-  if (user == null) res.status(404).send("User does not exist!");
+  if (user == null) res.json({ status: 401, statusText: 'User does not exist!'});
 
   if (await bcrypt.compare(req.body.password, user.password)) {
     const accessToken = generateAccessToken({ user: user });
     const refreshToken = generateRefreshToken({ user: user });
     res.json({ accessToken: accessToken, refreshToken: refreshToken, user: user });
   } else {
-    res.status(401).send("Password Incorrect!");
+    res.json({ status: 401, statusText: 'Incorrect Password!'});
   }
 });
 
