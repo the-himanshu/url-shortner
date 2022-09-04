@@ -34,7 +34,7 @@ router.post("/login", async (req, res) => {
   if (await bcrypt.compare(req.body.password, user.password)) {
     const accessToken = generateAccessToken({ user: user });
     const refreshToken = generateRefreshToken({ user: user });
-    res.json({ accessToken: accessToken, refreshToken: refreshToken });
+    res.json({ accessToken: accessToken, refreshToken: refreshToken, user: user });
   } else {
     res.status(401).send("Password Incorrect!");
   }
